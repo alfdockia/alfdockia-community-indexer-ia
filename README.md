@@ -3,6 +3,9 @@
 Version: `1.0.0`. Paquete base Java: `alfdockia.community.indexer.ia`.
 Clase principal: `AlfdockiaCommunityIndexerIaApplication`.
 
+Documentacion tecnica: [docs/README.md](docs/README.md).
+Mapa para Codex: [AGENTS.md](AGENTS.md).
+
 Indexer Spring Boot orientado a contenido Alfresco. Escucha eventos de ActiveMQ,
 recupera la foto completa del nodo desde la API publica de Alfresco, extrae el
 texto del binario, genera el embedding y guarda en Qdrant un punto híbrido con
@@ -11,8 +14,9 @@ vector dense, documento BM25 y payload rico para búsqueda posterior.
 El modulo solo indexa nodos de contenido. No filtra solo por `cm:content` en el
 evento, porque los tipos custom que extienden de `cm:content` pueden llegar con
 su propio QName. El filtro real se hace despues de cargar el nodo desde Alfresco:
-si la entrada REST es fichero o tiene bloque `content`, se indexa; si no, se
-elimina/ignora en Qdrant.
+la entrada REST debe ser contenido y su tipo exacto y MIME deben estar en las
+listas configuradas. Los subtipos custom deben incluirse explicitamente.
+Los nodos fuera de esa politica se eliminan/ignoran en Qdrant.
 
 ## Flujo
 
@@ -90,10 +94,11 @@ Propiedades clave:
 
 Este módulo está diseñado para una plataforma nueva, no para migrar colecciones
 ni documentos históricos. Indexer crea una única colección híbrida
-`alfresco-content` vacía y la mantiene exclusivamente a partir de los eventos de
+`alfresco-content` vacía y la mantiene normalmente a partir de los eventos de
 ActiveMQ. Cada alta o modificación hace upsert del mismo ID estable; cada
-borrado elimina ese punto. No existen backfill, alias de corte, rollback ni
-dual-write.
+borrado elimina ese punto. No hay migracion automatica, alias de corte ni
+dual-write. Si existen endpoints administrativos de reindexacion de nodo,
+carpeta y site, descritos en [configuracion](docs/configuration.md).
 
 Indexer debe estar operativo antes de empezar a cargar documentos en Alfresco.
 Search apunta a la misma colección `alfresco-content`.
@@ -123,8 +128,8 @@ la imagen usa la etiqueta `1.0.0`. El puerto publicado se configura con
 `ALFDOCKIA_INDEXER_PORT` (por defecto `8082`) y el nivel de log del paquete con
 `LOGGING_LEVEL_ALFDOCKIA_COMMUNITY_INDEXER_IA` (por defecto `INFO`).
 
-El `docker-compose.yml` expone como variables de entorno todas las propiedades
-configurables del servicio. El fichero `.env` contiene los valores por defecto y
-explica para que sirve cada variable. Por defecto levanta un Qdrant local,
+El `compose.yml` expone variables de entorno para la configuracion del servicio.
+Los valores por defecto estan en ese archivo y en `application.properties`;
+un `.env` local opcional no se incluye en el repositorio. Por defecto levanta un Qdrant local,
 apunta Alfresco y ActiveMQ a `host.docker.internal`, y usa OpenAI para generar
 los embeddings.

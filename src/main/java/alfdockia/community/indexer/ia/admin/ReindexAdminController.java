@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.admin;
 
 import alfdockia.community.indexer.ia.service.EventIndexingService;
@@ -7,6 +15,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Expone la reindexacion administrativa de nodos, carpetas y sites.
+ */
 @RestController
 public class ReindexAdminController {
 

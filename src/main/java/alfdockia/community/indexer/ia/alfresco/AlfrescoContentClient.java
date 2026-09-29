@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.alfresco;
 
 import org.slf4j.Logger;
@@ -16,6 +24,9 @@ import java.util.HexFormat;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * Descarga contenido Alfresco respetando la configuracion y los limites de bytes.
+ */
 @Component
 public class AlfrescoContentClient {
 

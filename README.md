@@ -133,3 +133,11 @@ Los valores por defecto estan en ese archivo y en `application.properties`;
 un `.env` local opcional no se incluye en el repositorio. Por defecto levanta un Qdrant local,
 apunta Alfresco y ActiveMQ a `host.docker.internal`, y usa OpenAI para generar
 los embeddings.
+
+## Copyright
+
+Copyright (c) 2026 AIgen Technologies S.L.
+
+La propiedad intelectual de este módulo pertenece a **AIgen Technologies S.L.**
+Las condiciones de uso, modificación y distribución se recogen en [LICENSE](LICENSE).
+Consulta el [aviso de titularidad](COPYRIGHT) y el [catálogo de clases Java](docs/java-classes.md).

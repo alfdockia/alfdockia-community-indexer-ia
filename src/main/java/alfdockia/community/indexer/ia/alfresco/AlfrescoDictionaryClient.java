@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.alfresco;
 
 import alfdockia.community.indexer.ia.qdrant.AlfrescoPropertyDefinition;
@@ -18,6 +26,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Consulta el diccionario de Alfresco para obtener definiciones de propiedades.
+ */
 @Component
 public class AlfrescoDictionaryClient {
 

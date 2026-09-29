@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.qdrant;
 
 import java.lang.reflect.Array;
@@ -12,6 +20,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Construye el texto canonico de busqueda a partir de nombre, propiedades y contenido.
+ */
 public final class SearchTextBuilder {
 
     private final int maxLength;

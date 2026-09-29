@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.embedding;
 
 import org.slf4j.Logger;
@@ -9,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Comprueba la dimension del vector y aplica la estrategia de ausencia configurada.
+ */
 @Component
 public class EmbeddingVectorPolicy {
 

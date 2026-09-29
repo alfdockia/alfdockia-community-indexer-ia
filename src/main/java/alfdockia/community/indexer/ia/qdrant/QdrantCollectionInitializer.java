@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.qdrant;
 
 import alfdockia.community.indexer.ia.embedding.EmbeddingVectorPolicy;
@@ -9,6 +17,9 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+/**
+ * Inicializa la coleccion y sus indices al arrancar segun la configuracion.
+ */
 @Component
 @Order(10)
 public class QdrantCollectionInitializer implements ApplicationRunner {

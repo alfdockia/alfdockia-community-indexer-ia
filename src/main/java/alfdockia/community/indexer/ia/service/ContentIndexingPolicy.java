@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.service;
 
 import alfdockia.community.indexer.ia.alfresco.AlfrescoNodeSnapshot;
@@ -9,6 +17,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Determina si un nodo cumple los filtros de contenido, tipo y MIME.
+ */
 @Component
 public class ContentIndexingPolicy {
 

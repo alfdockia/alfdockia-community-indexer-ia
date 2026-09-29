@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.service;
 
 import alfdockia.community.indexer.ia.alfresco.AlfrescoContentClient;
@@ -25,6 +33,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Coordina la indexacion, el borrado y la reindexacion de contenido Alfresco.
+ */
 @Service
 public class EventIndexingService {
 

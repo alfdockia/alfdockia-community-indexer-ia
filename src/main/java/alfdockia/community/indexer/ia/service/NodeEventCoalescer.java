@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.service;
 
 import org.alfresco.repo.event.v1.model.DataAttributes;
@@ -14,6 +22,9 @@ import java.time.Instant;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+/**
+ * Consolida eventos pendientes por nodo y prioriza borrados y cambios de permisos.
+ */
 @Component
 public class NodeEventCoalescer {
 

@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.alfresco;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -26,6 +34,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * Recupera nodos y bibliotecas documentales desde la API de Alfresco.
+ */
 @Component
 public class AlfrescoNodeClient {
 

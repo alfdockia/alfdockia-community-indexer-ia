@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.qdrant;
 
 import alfdockia.community.indexer.ia.alfresco.AlfrescoDictionaryClient;
@@ -15,6 +23,9 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Sincroniza los indices dinamicos de payload con el diccionario Alfresco.
+ */
 @Component
 @Order(20)
 public class DictionaryIndexSynchronizer implements ApplicationRunner {

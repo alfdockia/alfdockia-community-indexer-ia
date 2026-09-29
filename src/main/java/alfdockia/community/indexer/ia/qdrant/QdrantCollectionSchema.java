@@ -1,9 +1,20 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.qdrant;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * Describe el esquema hibrido de vectores y los indices de payload.
+ */
 public record QdrantCollectionSchema(
         Map<String, Object> collectionBody,
         Map<String, Object> payloadIndexes

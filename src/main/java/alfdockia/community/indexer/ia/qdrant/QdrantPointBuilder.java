@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 AIgen Technologies S.L.
+ *
+ * La propiedad intelectual de este modulo pertenece a AIgen Technologies S.L.
+ * Consulte el archivo LICENSE en la raiz del repositorio para conocer los
+ * terminos de licencia aplicables.
+ */
+
 package alfdockia.community.indexer.ia.qdrant;
 
 import alfdockia.community.indexer.ia.alfresco.AlfrescoNodeSnapshot;
@@ -26,6 +34,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Construye puntos de indexacion a partir de eventos y snapshots Alfresco.
+ */
 @Component
 public class QdrantPointBuilder {
 
